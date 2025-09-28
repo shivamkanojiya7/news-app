@@ -15,7 +15,7 @@ function bindData(articles){
 
   cardsContainer.innerHTML="";
 
-    articles.forEach(article=>{
+    data.articles.forEach(article=>{
     if(!article.urlToImage) return;
     const cardClone=newsCardTemplate.content.cloneNode(true);
     fillDataInCard(cardClone,article);
@@ -54,4 +54,5 @@ searchButton.addEventListener('click',()=>{
   const query=searchtext.value;
   if(!query) return;
   fetchNews(query);
+
 })
